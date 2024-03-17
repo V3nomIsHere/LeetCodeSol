@@ -1,0 +1,25 @@
+#Bruteforce method in Python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        n = len(nums)
+        for i in range(n - 1):
+            for j in range(i + 1, n):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+        return []
+
+
+#Bruteforce method in Java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int len = nums.length;
+        for(int i = 0 ; i < len - 1 ; i++)
+            for(int j = i + 1 ; j < len ; j++)
+            {
+                if(nums[i] + nums[j] == target)
+                    return new int[]{i , j};
+            }
+        return new int[]{-1 , -1};
+    }
+ 
+}
